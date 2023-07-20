@@ -1,0 +1,54 @@
+.TH _PRINTF 1 _printf\-0.1 2023-07-18 Linux
+.SH NAME
+_printf \- Is a function that produces output according to a format.
+.SH SYNOPSIS
+.B _printf
+#include "main.h" for the prototypes.
+.SH DESCRPTION
+.P 
+_printf is a funtion that prints arguments according to a format.
+Also converts this arguments for output on based on the format of the string.
+
+.SH CONVERSION SPECIFIERS
+[\fB\-c\fR] 
+[\fB\-d\fR]
+[\fB\-i\fR]
+[\fB\-s\fR]
+[\fB\-%\fR]
+.P
+This flags define the diferent types of variables to print.
+.SH OPTIONS
+.TP
+.BR \-c
+Conversion to a char format output.
+.TP
+.BR \-d
+Conversion to a decimal format output.
+.TP
+.BR \-i
+Conversion to a integer format output.
+.TP
+.BR \-s
+String format output.
+.TP
+.BR \-%
+Porcentage format output. No argument is converted.
+.SH EXAMPLE
+.SH RETURN VALUES
+.P 
+Returns the number of characters printed (excluding the null byte used to end
+output to strings)
+.SH FILES
+.RB _printf.c
+.RB _putchar.c
+.RB main.c
+.RB counter1,6.c
+.RB switchprint.c
+.RB vprint.c
+.RB main.h
+.RB vinteger.h
+.RB README.md
+.SH AUTHOR
+Noelia Micaela Viera Larrosa & Juan Manuel Rivera Seara
+.SH COPYRIGHT
+Holberton School Uruguay.
