@@ -1,7 +1,7 @@
 #include "main.h"
 int switchprint(const char *format, va_list args)
 {
-	int x = 0, i, num;
+	int x = 0, i, num, d;
 	char buffer[12];
 	char *stn;
 
@@ -10,35 +10,62 @@ int switchprint(const char *format, va_list args)
 				case 'c':
 					{
 					_putchar(va_arg(args, int));
-					return (x + 1);
+					x += 1;
 					break; }
 				case 's':
 					{
 					char *s = va_arg(args, char *);
 
+					if (s == NULL)
+					{
+					_putchar('(');
+					_putchar('n');
+					_putchar('u');
+					_putchar('l');
+					_putchar('l');
+					_putchar(')');
+					x += 6;
+					break;
+					}
+					else
+					{
 					for (i = 0; s[i] != '\0'; i++)
 						{
 						_putchar(s[i]);
 						}
-					return (x + i);
-					break; }
+					x = x + i;
+					}
+					break;
+					}
 				case '%':
 					{
 					char t = '%';
 
 					_putchar(t);
-					return (x + 1);
-					break; }
+					x += 1;
+					break;
+					}
 				case 'd':
 				case 'i':
 					{
 					num = va_arg(args, int);
 					stn = my_itoa(num, buffer);
 					reverser(stn);
-					for (i = 0; stn[i] != '\0'; i++)
+					for (d = 0; stn[d] != '\0'; d++)
 					{
-					_putchar(stn[i]);
-					} } }
+					_putchar(stn[d]);
+					}
+					x += d;
+					break;
+					}
+				default:
+					{
+					_putchar('%');
+					_putchar(*format);
+					x += 2;
+					break;
+					}
+				}
 format++;
 return (x);
 }

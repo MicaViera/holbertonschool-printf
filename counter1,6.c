@@ -4,12 +4,8 @@ int counter16(const char *format)
 int count = 0;
 int iter = 0;
 
-while (format[iter] != '\0')
-{
-	if (format[iter] == '%' && format[iter + 1] == '%')
-		{
-		count++;
-		}
+	while (format[iter] != '\0')
+	{
 		if (format[iter] == '%')
 		{
 		iter++;
@@ -22,7 +18,7 @@ while (format[iter] != '\0')
 		{
 		count++;
 		}
-iter++;
-}
+	iter++;
+	}
 return (count);
 }

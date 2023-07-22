@@ -1,29 +1,33 @@
 #include "main.h"
 int v_printf(const char *format, va_list args)
 {
-	int flag1 = 0;
+	int x = 0, flag1 = 0, i = 0;
 
 	if (format == NULL)
 	{
 	return (-1);
 	}
 
-	while (*format != '\0')
+	while (format[i] != '\0')
 	{
+		if (format == NULL)
+		{
+		return (-1);
+		}
 		if (flag1 == 0)
 		{
-			if (*format == '%')
+			if (format[i] == '%')
 			{
 			flag1 = 1; }
 			else
 			{
-			_putchar(*format); } }
+			_putchar(format[i]); } }
 		else if (flag1 == 1)
 			{
-			switchprint(format, args);
-			flag1 = 0;
+			x =	switchprint(format + i, args);
+				flag1 = 0;
 			}
-	format++;
+	i++;
 }
-return (0);
+return (x);
 }
