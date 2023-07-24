@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * switchprint - Is teh function that switches between characters after %.
+ * @format: Is a character string.
+ * @args: The arguments.
+ * Return: x.
+ */
 int switchprint(const char *format, va_list args)
 {
 	int x = 0, i, num, d;
