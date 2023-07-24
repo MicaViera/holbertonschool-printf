@@ -10,9 +10,9 @@
 #define RESET printf("\033[0m");
 
 /**
- *  * output - check expected and obtained code.
- *   * Return: 0 for success, 1 for error.
- *    */
+ * output - check expected and obtained code.
+ * Return: 0 for success, 1 for error.
+ */
 int output(int a, int b)
 {
 		printf("\n");
