@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * counter16 - Is a function that counts every character of the string.
+ * @format: character string.
+ * Return: count.
+ */
 int counter16(const char *format)
 {
 int count = 0;
