@@ -60,9 +60,9 @@ int main(void)
 }
 Output:
 root:/ Hello World
-``````
 ```
 On this other example prints more arguments.
+
 ```
 int main(void)
 {
