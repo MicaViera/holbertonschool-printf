@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * my_itoa - Converts the values to int.
+ * @num: The value to convert.
+ * @str: Saves the new converted value.
+ * Return: str.
+ */
 char *my_itoa(long int num, char *str)
 {
 	int i = 0;
