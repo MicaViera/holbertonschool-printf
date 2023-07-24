@@ -1,9 +1,13 @@
 #include "main.h"
-char *my_itoa(int num, char *str)
+char *my_itoa(long int num, char *str)
 {
 	int i = 0;
 	int is_negative = 0;
 
+	if (num == 0)
+	{
+		str[i++] = '0';
+	}
 	if (num < 0)
 	{
 		is_negative = 1;

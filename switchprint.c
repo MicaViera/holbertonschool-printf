@@ -2,14 +2,15 @@
 int switchprint(const char *format, va_list args)
 {
 	int x = 0, i, num, d;
-	char buffer[12];
-	char *stn;
+	char buffer[32];
+	char *stn, c;
 
 				switch (*format)
 				{
 				case 'c':
 					{
-					_putchar(va_arg(args, int));
+					c = va_arg(args, int);
+					_putchar(c);
 					x += 1;
 					break; }
 				case 's':
@@ -33,7 +34,7 @@ int switchprint(const char *format, va_list args)
 						{
 						_putchar(s[i]);
 						}
-					x = x + i;
+					x += i;
 					}
 					break;
 					}
@@ -42,7 +43,6 @@ int switchprint(const char *format, va_list args)
 					char t = '%';
 
 					_putchar(t);
-					x += 1;
 					break;
 					}
 				case 'd':
@@ -55,7 +55,7 @@ int switchprint(const char *format, va_list args)
 					{
 					_putchar(stn[d]);
 					}
-					x += d;
+					x += strlen(stn);
 					break;
 					}
 				default:

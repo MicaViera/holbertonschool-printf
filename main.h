@@ -7,5 +7,5 @@ int _printf(const char *format, ...);
 int v_printf(const char *format, va_list args);
 int switchprint(const char *format, va_list args);
 int counter16(const char *format);
-char* my_itoa(int num, char* str);
+char* my_itoa(long int num, char* str);
 void reverser(char *str);
