@@ -37,6 +37,10 @@ char *my_itoa(long int num, char *str)
 
 return (str);
 }
+/**
+ * reverser - Is a function that reverses a string.
+ * @str: the string to reverse.
+ */
 void reverser(char *str)
 {
 int length = strlen(str);
