@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * v_printf - This function prints without the format specifiers.
+ * @format: Is the character string.
+ * @args: The arguments.
+ * Return: 0.
+ */
 int v_printf(const char *format, va_list args)
 {
 	int x = 0, flag1 = 0, i = 0;
